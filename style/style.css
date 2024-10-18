@@ -94,37 +94,20 @@ body {
     left: 445px;
 }
 
+/* Centralizar o bolo */
 .plate {
-    position: absolute;
-    width: 130px;
-    height: 5px;
-    background-color: #00bbf9;
-    left: 85px; /* Centralizado */
-    top: 250px; /* Ajustado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
 }
 
-.cake {
-    position: absolute;
-    overflow: hidden;
+.cake-img {
     width: 100px;
-    height: 50px;
-    background-color: #f15bb5;
-    border-radius: 10px 10px 0 0;
-    top: -50px;
-    left: 15px; /* Ajustado */
-    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
-}
-
-.flame {
-    position: absolute;
-    background-color: #fb5607;
-    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
-    transform: rotate(-45deg);
-    width: 15px;
-    height: 15px;
-    opacity: 0.7;
-    top: -93px;
-    left: 57px;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain;
 }
 
 /* Parte interna do cartão */
