@@ -1,4 +1,3 @@
-/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -8,27 +7,29 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Evita rolagem */
-}
+    overflow: hidden; 
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(168, 167, 167, 0.6);
+    background: linear-gradient(to bottom, #FF9966, #D162A4);
     font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Container do cartão */
 .birthdayCard {
     position: relative;
-    width: 300px; /* Tamanho do cartão */
-    height: 400px; /* Tamanho do cartão */
+    width: 300px;
+    height: 400px;
     cursor: pointer;
     transform-style: preserve-3d;
     transform: perspective(2500px);
     transition: 4s;
-}
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
 
 .birthdayCard:hover {
     transform: perspective(2500px) rotate(5deg);
@@ -49,7 +50,6 @@ body {
     display: none;
 }
 
-/* Frente do cartão */
 .cardFront {
     position: relative;
     background-color: rgb(255, 246, 246);
@@ -59,6 +59,10 @@ body {
     transform-origin: left;
     box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
     transition: .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 
 .happy, .toyou, .bday {
@@ -66,19 +70,17 @@ body {
     font-family: 'Didot', serif;
     text-align: center;
     backface-visibility: hidden;
-    font-size: 28px; /* Aumentado */
-}
+    font-size: 28px; /
 
 .happy {
-    top: 80px;
+    top: 10px; 
 }
 
 .toyou {
-    top: 40px;
-}
+    top: 10px; 
 
 .bday {
-    top: 60px;
+    top: 10px; 
 }
 
 .wrap-deco {
@@ -106,11 +108,10 @@ body {
 
 .cake-img {
     width: 100px;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto; 
     object-fit: contain;
 }
 
-/* Parte interna do cartão */
 .cardInside {
     position: absolute;
     background-color: #fff;
@@ -122,8 +123,8 @@ body {
     box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o texto verticalmente */
-    align-items: center; /* Centraliza o texto horizontalmente */
+    justify-content: center;
+    align-items: center; 
     padding: 20px;
 }
 
@@ -132,14 +133,14 @@ body {
 }
 
 .happy, .bday, .toyou {
-    position: static; /* Removendo posição relativa dentro da parte interna */
+    position: static; 
     margin: 5px 0;
 }
 
 .wishes {
     margin-top: 20px;
     text-align: center;
-    font-size: 16px; /* Ajuste do tamanho */
+    font-size: 16px; 
 }
 
 p {
@@ -155,10 +156,74 @@ p {
 /* Responsividade para iPhone 13 */
 @media (max-width: 390px) {
     .birthdayCard {
-        width: 220px; /* Ajustado */
-        height: 300px; /* Ajustado */
+        width: 220px; 
+        height: 300px; 
     }
     .happy, .toyou, .bday {
-        font-size: 20px; /* Ajustado */
+        font-size: 20px; 
     }
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+canvas#confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.birthdayCard {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.button-53 {
+    background-color: #000000;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: 0.75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-53:after {
+    content: "";
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+    bottom: 2px;
+    left: 2px;
 }
