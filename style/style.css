@@ -55,6 +55,11 @@ body {
     display: none;
 }
 
+.front-text {
+    margin-bottom: 60px; /* Ajusta essa margem conforme necessário */
+}
+
+
 .birthdayCard:hover .wrap-deco,
 .birthdayCard:hover .wrap-decoTwo,
 .birthdayCard:hover .plate {
@@ -63,7 +68,7 @@ body {
 
 .cardFront {
     position: relative;
-    background-color: rgb(255, 246, 246);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -78,11 +83,11 @@ body {
 
 .happy, .toyou, .bday {
     position: relative;
-    font-family: 'Didot', serif;
+    font-family: Georgia, serif;    
     text-align: center;
     backface-visibility: hidden;
-    font-size: 28px; /* Corrigido */
-    margin: 5px 0; /* Adicionei margens para espaçamento */
+    font-size: 23px; /* Corrigido */
+    margin: 2px 0; /* Adicionei margens para espaçamento */
 }
 
 .wrap-deco {
@@ -105,11 +110,11 @@ body {
     align-items: center;
     width: 100%;
     height: 100px;
-    margin-top: 20px;
+    margin-top: -10px;
 }
 
 .cake-img {
-    width: 100px;
+    width: 200px;
     height: auto; 
     object-fit: contain;
 }
@@ -141,7 +146,7 @@ body {
 }
 
 p {
-    font-family: 'Brush Script MT';
+    font-family: 'Gill Sans', 'sans-serif';
     color: #333;
 }
 
@@ -172,10 +177,8 @@ canvas#confetti {
 }
 
 .button-53 {
-    background-color: #000000;
-    border: 0 solid #e5e7eb;
-    box-sizing: border-box;
-    color: #ffffff;
+    background-color: #ff79d7f6;
+    color: #000000;
     display: flex;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
