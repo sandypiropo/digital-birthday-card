@@ -13,7 +13,7 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    flex-direction: column; /* Mantenha a direção da coluna */
+    flex-direction: column; 
     align-items: center;
     background: linear-gradient(to bottom, #FF9966, #D162A4);
     font-family: Arial, sans-serif;
@@ -34,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center; /* Adicionei para centralizar o texto */
+    text-align: center; 
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -56,8 +56,7 @@ body {
 }
 
 .front-text {
-    margin-bottom: 60px; /* Ajusta essa margem conforme necessário */
-}
+    margin-bottom: 60px; 
 
 
 .birthdayCard:hover .wrap-deco,
@@ -86,11 +85,11 @@ body {
     font-family: Georgia, serif;    
     text-align: center;
     backface-visibility: hidden;
-    font-size: 23px; /* Corrigido */
-    margin: 2px 0; /* Adicionei margens para espaçamento */
+    font-size: 23px; 
+    margin: 2px 0;
 }
 
-.wrap-deco {
+.wrap-deco {1
     position: absolute;
     top: -230px;
     left: -200px;
